@@ -154,8 +154,7 @@ class GitHubSecret:
                 Error message if the operation fails.
         """
         response = self.session.delete(f'https://api.github.com/repos/CHRNVpy/test/actions/secrets/{secret_name}')
-        if response.status_code == 201:
-            print(f'Secret "{secret_name}" successfully created.')
+        if response.status_code == 204:
+            print(f'Secret "{secret_name}" successfully deleted.')
         else:
-            print(f'Failed to create secret "{secret_name}".')
             print(f'Response: {response.text}')

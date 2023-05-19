@@ -10,8 +10,9 @@
 <code>secret = GitHubSecret(github_url, token=token)</code>
 </p>
 
-<p>now u can use GitHubSecret methods to list, get, create/update your secrets<br>
+<p>now u can use GitHubSecret methods to list, get, create/update, delete your secrets<br>
 <code>secret.list_secrets()</code><br>
-<code>secret.get_secret()</code><br>
+<code>secret.get_secret('SECRET_NAME')</code><br>
 <code>secret.create_update_secret('SECRET_NAME', 'SECRET_VALUE')</code><br>
+<code>secret.delete_secret('SECRET_NAME')</code><br>
 </p>
